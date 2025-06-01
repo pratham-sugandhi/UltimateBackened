@@ -1,7 +1,7 @@
 body {
     font-family: 'Arial', sans-serif;
     background: linear-gradient(to bottom, #0F0C29, #302B63, #24243E); /* Gemini inspired background */
-    color: #E0E0E0; /* Light text for dark background */
+    color: #FFFFFF; /* White text for dark background */
     min-height: 100vh;
     margin: 0;
     display: flex;
@@ -10,7 +10,7 @@ body {
 }
 
 .container {
-    background-color: #1a1a2e; /* Dark bluish background */
+    background-color: #1a1a2e; /* Slightly darker bluish background */
     border-radius: 15px; /* Rounded corners */
     padding: 30px; /* Inner spacing */
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
@@ -32,7 +32,7 @@ h1 {
     margin-bottom: 20px; /* Space below chat */
     height: 400px;
     overflow-y: auto;
-    background-color: #2a2a4a; /* Slightly lighter bluish background */
+    background-color: #1a1a2e; /* Dark bluish background */
     box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3); /* Inner shadow */
 }
 
@@ -48,14 +48,15 @@ h1 {
 }
 
 .message .sender {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-right: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 10px;
+  width: 50px; /* Fixed width for the sender area */
 }
 
-.message .profile-pic-placeholder {
-    width: 40px;
+.message .profile-pic {
+    width: 35px;
     height: 40px;
     background-color: #BB86FC; /* Placeholder color */
     border-radius: 50%;
@@ -63,27 +64,26 @@ h1 {
     flex-shrink: 0; /* Prevent shrinking */
 }
 
-.message .sender span {
+.message .sender-name {
     font-size: 0.8em;
     color: #BB86FC; /* Accent color for sender name */
     font-weight: bold;
     text-align: center;
+    width: 100%; /* Ensure the name takes the full width of the sender area */
 }
 
 .message .message-content {
-    font-size: 1em;
-    color: #E0E0E0; /* Light text color */
-    flex-grow: 1; /* Allow content to take up space */
+  font-size: 1rem; /* Use rem for better scaling */
+  flex-grow: 1; /* Allow content to take up space */
+  padding: 10px; /* Add padding to the message content */
+  border-radius: 8px;
+  word-break: break-word; /* Prevent long words from overflowing */
 }
 
 .message.sent {
-    background: linear-gradient(to right, #6200EE, #BB86FC); /* Gradient for sent messages */
+    background: linear-gradient(to right, #007bff, #0056b3); /* Professional gradient for sent messages */
     margin-left: auto;
-    color: #ffffff;
-}
-
-.message.received {
-    background: linear-gradient(to right, #03DAC6, #018786); /* Gradient for received messages */
+    background: linear-gradient(to right, #f8f9fa, #e2e6ea); /* Professional gradient for received messages */
     margin-right: auto;
     color: #1a1a2e; /* Dark text for lighter background */
 }
@@ -150,4 +150,29 @@ h1 {
 #chat {
   scrollbar-width: thin;
   scrollbar-color: #888 #1a1a2e;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+        width: 100%; /* Full width on smaller screens */
+        border-radius: 0; /* Remove rounded corners on full width */
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    #chat {
+        height: 300px; /* Reduce chat height on smaller screens */
+    }
+
+    .message {
+        max-width: 90%; /* messages take up more width */
+    }
+
+    .message .message-content {
+        font-size: 0.9rem; /* Slightly smaller font on mobile */
+    }
 }
