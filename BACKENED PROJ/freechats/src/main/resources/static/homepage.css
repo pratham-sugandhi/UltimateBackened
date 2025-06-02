@@ -2,7 +2,7 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 20px;
-    background-color: #1A1A2E; /* Navy Blue */
+    background: linear-gradient(to right, #1200FF, #00E5FF, #FF2CDF, #FF0A6C); /* New Futuristic Gradient */
     color: #FFFFFF; /* White for text on dark background */
     display: flex;
     justify-content: center;
@@ -13,9 +13,10 @@ body {
 .homepage-container {
     text-align: center;
     background-color: #ffffff;
- padding: 40px;
+ background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent dark background for contrast */
+    padding: 40px;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* More prominent shadow */
     max-width: 600px;
     width: 90%;
 }
@@ -28,15 +29,15 @@ h1 {
 
 p {
  font-size: 1.1em;
-    margin-bottom: 30px;
-    color: #CCCCCC; /* Lighter text for readability */
+ margin-bottom: 30px;
+ color: #E0E0E0; /* Lighter text for readability on dark background */
 }
 
 form {
     margin-top: 20px;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-direction: column; /* Keep column layout for form */
+    align-items: center; /* Center form elements */
 }
 
 label {
@@ -49,7 +50,7 @@ input[type="text"],
 input[type="number"] {
     padding: 10px;
     margin-bottom: 20px;
-    border: 1px solid #B066FE; /* Shining Purple border */
+    border: 1px solid #FF2CDF; /* Magenta border */
  border-radius: 5px;
     background-color: #2A2A3E; /* Slightly lighter Navy Blue for input */
     color: #FFFFFF;
@@ -58,8 +59,8 @@ input[type="number"] {
     box-sizing: border-box;
 }
 
-button {
-    background-color: #F638DC; /* Neon Pink */
+button { /* Style the submit button */
+ background-color: #FF0A6C; /* Red-Pink */
     color: #1A1A2E; /* Navy Blue */
     display: inline-block;
     margin: 10px;
@@ -70,8 +71,9 @@ button {
     font-size: 1em;
 }
 
-.nav-links a:hover {
-    background-color: #E029C6; /* Slightly darker Neon Pink on hover */
+button:hover { /* Hover effect for the button */
+ background-color: #E0095A; /* Slightly darker Red-Pink on hover */
+    color: #FFFFFF; /* White text on hover */
 }
 
 /* Responsive Design */

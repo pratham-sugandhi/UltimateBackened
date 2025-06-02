@@ -3,8 +3,8 @@ body {
     font-family: 'Arial', sans-serif; /* Or a futuristic font if you prefer */
     margin: 0;
     padding: 20px;
-    background: linear-gradient(to right, #1A1A2E, #B066FE); /* Navy Blue to Shining Purple gradient */
-    color: #FFFFFF; /* Default text color for good contrast */
+    background: linear-gradient(to right, #1200FF, #00E5FF, #FF2CDF, #FF0A6C); /* Futuristic gradient */
+    color: #FFFFFF; /* Default text color */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -14,7 +14,7 @@ body {
 
 /* Container for the entire chat area */
 .chat-container {
-    background-color: #2A2A3E; /* Slightly lighter Navy Blue for the container background */
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent dark background for contrast */
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* More prominent shadow */
@@ -32,9 +32,9 @@ body {
     overflow-y: auto; /* Enable vertical scrolling */
     padding: 10px;
     margin-bottom: 15px;
-    border: 1px solid #B066FE; /* Shining Purple border */
+    border: 1px solid #00E5FF; /* Cyan border */
     border-radius: 8px;
-    background-color: #1A1A2E; /* Dark Navy Blue for message background */
+    background-color: rgba(0, 0, 0, 0.3); /* More transparent dark background for messages */
     color: #FFFFFF; /* White text for message content */
     word-break: break-word; /* Prevent long words from overflowing */
 }
@@ -50,14 +50,14 @@ body {
 
 /* Styling for messages from the current user (optional, requires different class/structure) */
 .message.self { /* Example class for messages sent by the current user */
-    background-color: #B066FE; /* Shining Purple background for sent messages */
-    color: #1A1A2E; /* Navy Blue text for sent messages */
+    background-color: #FF0A6C; /* Red-Pink background for sent messages */
+    color: #FFFFFF; /* White text for sent messages */
     margin-left: auto; /* Align sent messages to the right */
 }
 
 /* Styling for messages from other users */
 .message.other { /* Example class for messages from other users */
-    background-color: #4A4A5E; /* A neutral dark color for received messages */
+    background-color: #00E5FF; /* Cyan background for received messages */
     color: #FFFFFF; /* White text for received messages */
     margin-right: auto; /* Align received messages to the left */
 }
@@ -66,7 +66,7 @@ body {
 /* Styling for the sender's name within a message */
 .message .sender { /* Assuming the sender name is in an element with class="sender" inside a message */
     font-weight: bold; /* Make the sender name bold */
-    color: #F638DC; /* Neon Pink for sender names */
+    color: #1200FF; /* Deep Blue for sender names */
     margin-right: 5px; /* Space between name and message */
 }
 
@@ -80,9 +80,9 @@ body {
 #messageInput { /* Assuming your input field has id="messageInput" */
     flex-grow: 1; /* Allow input field to take up space */
     padding: 10px;
-    border: 1px solid #B066FE; /* Shining Purple border */
+    border: 1px solid #FF2CDF; /* Magenta border */
     border-radius: 5px;
-    background-color: #2A2A3E; /* Slightly lighter Navy Blue for input background */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent dark background */
     color: #FFFFFF; /* White text for input */
     box-sizing: border-box; /* Include padding and border in element's total width and height */
 }
@@ -90,22 +90,22 @@ body {
 /* Styling for the send button */
 #sendMessage { /* Assuming your send button has id="sendMessage" */
     padding: 10px 20px;
-    background-color: #F638DC; /* Neon Pink background */
-    color: #1A1A2E; /* Navy Blue text */
+    background-color: #FF2CDF; /* Magenta background */
+    color: #FFFFFF; /* White text */
     border: none;
     border-radius: 5px;
     cursor: pointer; /* Indicate it's clickable */
     transition: background-color 0.3s ease; /* Smooth transition on hover */
 }
 
-#sendMessage:hover {
-    background-color: #E029C6; /* Slightly darker Neon Pink on hover */
+ #sendMessage:hover {
+ background-color: #FF0A6C; /* Red-Pink on hover */
 }
 
 /* Basic styling for the username display at the top (if you added the div with id="userNameDisplay") */
 #userNameDisplay {
     text-align: center;
-    color: #F638DC; /* Neon Pink for the welcome message */
+    color: #00E5FF; /* Cyan for the welcome message */
     font-size: 1.2em;
     margin-bottom: 15px;
     font-weight: bold;
@@ -120,12 +120,12 @@ body {
 }
 
 #chat::-webkit-scrollbar-track {
-    background: #1A1A2E; /* Navy Blue track */
+    background: rgba(0, 0, 0, 0.3); /* Semi-transparent track */
     border-radius: 10px;
 }
 
 #chat::-webkit-scrollbar-thumb {
-    background: #B066FE; /* Shining Purple thumb */
+    background: #1200FF; /* Deep Blue thumb */
     border-radius: 10px;
 }
 
@@ -135,6 +135,6 @@ body {
 
 /* For Firefox */
 #chat {
-    scrollbar-width: thin;
-    scrollbar-color: #B066FE #1A1A2E; /* thumb track */
+    scrollbar-width: thin; /* Thin scrollbar */
+    scrollbar-color: #1200FF rgba(0, 0, 0, 0.3); /* Deep Blue thumb, semi-transparent track */
 }
