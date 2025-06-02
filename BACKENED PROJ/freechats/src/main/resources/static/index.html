@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chat App - Welcome</title>
+    <link rel="stylesheet" href="homepage.css">
     <style>
 body {
     font-family: sans-serif;
@@ -109,7 +110,10 @@ button[type="submit"]:hover {
         <p>Connect with friends and family instantly. Explore different chat rooms and features.</p>
         <form action="chat.html" method="get">
             <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
+            <div class="input-group mb-3">
+        <input type="text" id="senderInput" class="form-control" placeholder="Enter your name here..." aria-label="Recipient's username" aria-describedby="button-addon2">
+        </div>
+
             <button type="submit">Enter Chat</button>
         </form>
     </div>

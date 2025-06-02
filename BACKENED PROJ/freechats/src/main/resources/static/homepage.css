@@ -2,7 +2,7 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 20px;
-    background: linear-gradient(to right, #1200FF, #00E5FF, #FF2CDF, #FF0A6C); /* New Futuristic Gradient */
+    background: linear-gradient(to right, #1200FF, #00E5FF); /* Updated Futuristic Gradient */
     color: #FFFFFF; /* White for text on dark background */
     display: flex;
     justify-content: center;
@@ -22,7 +22,7 @@ body {
 }
 
 h1 {
- color: #F638DC; /* Neon Pink for solid, bold header */
+ color: #00E5FF; /* Cyan for solid, bold header */
     margin-bottom: 20px;
  font-weight: bold;
 }
@@ -31,6 +31,7 @@ p {
  font-size: 1.1em;
  margin-bottom: 30px;
  color: #E0E0E0; /* Lighter text for readability on dark background */
+ color: #B0E0E6; /* Lighter cyan for readability */
 }
 
 form {
@@ -43,14 +44,14 @@ form {
 label {
     margin-bottom: 8px;
  font-weight: bold;
-    color: #B066FE; /* Shining Purple */
+    color: #00E5FF; /* Cyan */
 }
 
 input[type="text"],
 input[type="number"] {
     padding: 10px;
     margin-bottom: 20px;
-    border: 1px solid #FF2CDF; /* Magenta border */
+    border: 1px solid #00E5FF; /* Cyan border */
  border-radius: 5px;
     background-color: #2A2A3E; /* Slightly lighter Navy Blue for input */
     color: #FFFFFF;
@@ -60,8 +61,8 @@ input[type="number"] {
 }
 
 button { /* Style the submit button */
- background-color: #FF0A6C; /* Red-Pink */
-    color: #1A1A2E; /* Navy Blue */
+ background-color: #00E5FF; /* Cyan */
+    color: #1200FF; /* Deep Blue */
     display: inline-block;
     margin: 10px;
     padding: 12px 25px;
@@ -72,8 +73,8 @@ button { /* Style the submit button */
 }
 
 button:hover { /* Hover effect for the button */
- background-color: #E0095A; /* Slightly darker Red-Pink on hover */
-    color: #FFFFFF; /* White text on hover */
+ background-color: #00BBDD; /* Slightly darker Cyan on hover */
+    color: #FFFFFF; /* White text on hover for better contrast */
 }
 
 /* Responsive Design */

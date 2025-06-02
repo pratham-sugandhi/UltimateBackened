@@ -3,7 +3,7 @@ body {
     font-family: 'Arial', sans-serif; /* Or a futuristic font if you prefer */
     margin: 0;
     padding: 20px;
-    background: linear-gradient(to right, #1200FF, #00E5FF, #FF2CDF, #FF0A6C); /* Futuristic gradient */
+    background: linear-gradient(to right, #1200FF, #00E5FF); /* Futuristic gradient with two colors */
     color: #FFFFFF; /* Default text color */
     display: flex;
     justify-content: center;
@@ -14,7 +14,7 @@ body {
 
 /* Container for the entire chat area */
 .chat-container {
-    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent dark background for contrast */
+    background-color: rgba(18, 0, 255, 0.3); /* Semi-transparent deep blue */
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* More prominent shadow */
@@ -32,9 +32,9 @@ body {
     overflow-y: auto; /* Enable vertical scrolling */
     padding: 10px;
     margin-bottom: 15px;
-    border: 1px solid #00E5FF; /* Cyan border */
+    border: 1px solid #1200FF; /* Deep Blue border */
     border-radius: 8px;
-    background-color: rgba(0, 0, 0, 0.3); /* More transparent dark background for messages */
+    background-color: rgba(0, 229, 255, 0.2); /* More transparent cyan for messages */
     color: #FFFFFF; /* White text for message content */
     word-break: break-word; /* Prevent long words from overflowing */
 }
@@ -50,14 +50,14 @@ body {
 
 /* Styling for messages from the current user (optional, requires different class/structure) */
 .message.self { /* Example class for messages sent by the current user */
-    background-color: #FF0A6C; /* Red-Pink background for sent messages */
+    background-color: #00E5FF; /* Cyan background for sent messages */
     color: #FFFFFF; /* White text for sent messages */
     margin-left: auto; /* Align sent messages to the right */
 }
 
 /* Styling for messages from other users */
 .message.other { /* Example class for messages from other users */
-    background-color: #00E5FF; /* Cyan background for received messages */
+    background-color: rgba(18, 0, 255, 0.5); /* Semi-transparent deep blue for received messages */
     color: #FFFFFF; /* White text for received messages */
     margin-right: auto; /* Align received messages to the left */
 }
@@ -67,7 +67,7 @@ body {
 .message .sender { /* Assuming the sender name is in an element with class="sender" inside a message */
     font-weight: bold; /* Make the sender name bold */
     color: #1200FF; /* Deep Blue for sender names */
-    margin-right: 5px; /* Space between name and message */
+    margin-right: 5px;
 }
 
 /* Styling for the input area container */
@@ -80,9 +80,9 @@ body {
 #messageInput { /* Assuming your input field has id="messageInput" */
     flex-grow: 1; /* Allow input field to take up space */
     padding: 10px;
-    border: 1px solid #FF2CDF; /* Magenta border */
+    border: 1px solid #00E5FF; /* Cyan border */
     border-radius: 5px;
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent dark background */
+    background-color: rgba(18, 0, 255, 0.4); /* Semi-transparent deep blue for input */
     color: #FFFFFF; /* White text for input */
     box-sizing: border-box; /* Include padding and border in element's total width and height */
 }
@@ -90,14 +90,14 @@ body {
 /* Styling for the send button */
 #sendMessage { /* Assuming your send button has id="sendMessage" */
     padding: 10px 20px;
-    background-color: #FF2CDF; /* Magenta background */
+    background-color: #00E5FF; /* Cyan background */
     color: #FFFFFF; /* White text */
     border: none;
     border-radius: 5px;
     cursor: pointer; /* Indicate it's clickable */
     transition: background-color 0.3s ease; /* Smooth transition on hover */
 }
-
+ 
  #sendMessage:hover {
  background-color: #FF0A6C; /* Red-Pink on hover */
 }
@@ -105,7 +105,7 @@ body {
 /* Basic styling for the username display at the top (if you added the div with id="userNameDisplay") */
 #userNameDisplay {
     text-align: center;
-    color: #00E5FF; /* Cyan for the welcome message */
+    color: #00E5FF; /* Cyan for the welcome message */ 
     font-size: 1.2em;
     margin-bottom: 15px;
     font-weight: bold;
@@ -120,7 +120,7 @@ body {
 }
 
 #chat::-webkit-scrollbar-track {
-    background: rgba(0, 0, 0, 0.3); /* Semi-transparent track */
+    background: rgba(18, 0, 255, 0.1); /* More transparent deep blue track */
     border-radius: 10px;
 }
 
@@ -128,13 +128,26 @@ body {
     background: #1200FF; /* Deep Blue thumb */
     border-radius: 10px;
 }
-
 #chat::-webkit-scrollbar-thumb:hover {
-    background: #9A56D6; /* Slightly darker Purple on hover */
+    background: #00E5FF; /* Cyan on hover */
 }
 
 /* For Firefox */
 #chat {
-    scrollbar-width: thin; /* Thin scrollbar */
-    scrollbar-color: #1200FF rgba(0, 0, 0, 0.3); /* Deep Blue thumb, semi-transparent track */
+    scrollbar-width: thin; /* Thi<div id="userNameDisplay"></div>
+n scrollbar */
+    scrollbar-color: #1200FF rgba(18, 0, 255, 0.1); /* Deep Blue thumb, more transparent deep blue track */
+@media (max-width: 600px) {
+        .homepage-container {
+            padding: 20px;
+        }
+        h1 {
+     font-size: 1.8em;
+        }
+
+        p {
+            font-size: 1em;
+        }
+
+    }
 }
