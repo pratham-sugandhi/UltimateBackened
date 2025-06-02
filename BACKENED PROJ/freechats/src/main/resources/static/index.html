@@ -5,41 +5,74 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chat App - Welcome</title>
     <style>
-        body {
-            font-family: sans-serif;
+body {
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(to right, #1A1A2E, #B066FE);
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+    color: #F638DC; /* Neon Pink for text */
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.1); /* Slightly transparent white background */
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    max-width: 500px;
+    width: 100%;
+}
+
+h1 {
+    color: #F638DC; /* Neon Pink */
+    margin-bottom: 20px;
+}
+
+p {
+    color: #B066FE; /* Shining Purple */
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+label {
+    text-align: left;
+    font-weight: bold;
+    color: #F638DC; /* Neon Pink */
+}
+
+input[type="text"],
+input[type="number"] {
+    padding: 12px;
+    border-radius: 5px;
+    border: 1px solid #B066FE; /* Shining Purple border */
+    background-color: rgba(26, 26, 46, 0.5); /* Semi-transparent Navy Blue */
+    color: #F638DC; /* Neon Pink text */
+}
+
+input[type="text"]::placeholder,
+input[type="number"]::placeholder {
+    color: rgba(246, 56, 220, 0.7); /* Lighter Neon Pink for placeholder */
+}
+
+button[type="submit"] {
+            padding: 12px 25px;
+            background-color: #F638DC; /* Neon Pink */
+            color: #1A1A2E; /* Navy Blue text */
+            border: none;
+            border-radius: 5px;
             display: flex;
             justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 20px;
-            box-sizing: border-box;
-        }
-        .container {
-            background-color: #fff;
-            padding: 40px;
-            border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            max-width: 500px;
-            width: 100%;
-        }
-        h1 {
-            color: #333;
-            margin-bottom: 20px;
-        }
-        p {
-            color: #666;
-            margin-bottom: 30px;
-            line-height: 1.6;
-        }
-        .button-group {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
-        .button-group a {
             display: inline-block;
             padding: 12px 25px;
             background-color: #007bff;
@@ -57,18 +90,28 @@
         }
         .button-group a:last-child:hover {
             background-color: #545b62;
+
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            font-size: 1em;
+            font-weight: bold;
         }
+
+button[type="submit"]:hover {
+    background-color: #B066FE; /* Shining Purple on hover */
+    color: #F638DC; /* Neon Pink text on hover */
+}
     </style>
 </head>
 <body>
     <div class="container">
         <h1>Welcome to the Chat App!</h1>
         <p>Connect with friends and family instantly. Explore different chat rooms and features.</p>
-        <div class="button-group">
-            <a href="chat.html">Go to Live Chats</a>
-            <a href="#">User Profile</a>
-            <a href="#">Settings</a>
-        </div>
+        <form action="chat.html" method="get">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <button type="submit">Enter Chat</button>
+        </form>
     </div>
 </body>
 </html>
